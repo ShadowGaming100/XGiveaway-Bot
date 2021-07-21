@@ -15,7 +15,7 @@ module.exports.run = async (client, message, args) => {
 			)
 			.setColor("GREEN")
 			.setDescription(
-				`**My prefix:** \`${prefixesdatabase.prefix}\` , ${emojis.slash} Slash Commands list for \`/help\`\nClick [HERE](https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot%20applications.commands) to invite me to your server.`
+				`**My prefix:** \`${prefixesdatabase.prefix}\` , Slash Commands list for \`/help\`\nClick [HERE](https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot%20applications.commands) to invite me to your server.`
 			)
 			.addField("**📱Basic**", "`help`, `ping`, `vote`, `uptime`")
 			.addField(
@@ -82,7 +82,7 @@ module.exports.run = async (client, message, args) => {
 			message.channel.send(embed);
 		} else {
 			const embeds = new Discord.MessageEmbed()
-				.setDescription(`${emojis.cross} Command is not found!`)
+				.setDescription(` Command is not found!`)
 				.setColor("RED");
 
 			return message.channel.send(embeds);
