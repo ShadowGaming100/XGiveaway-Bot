@@ -25,8 +25,8 @@ module.exports.run = async (client, message) => {
 			const embed = new Discord.MessageEmbed()
 				.setColor(0x7289da)
 				.setTimestamp()
-				// .addField("Prefix", 'd!', true)
-				// .addField("Total Commands", `${totcmds} commands`, true)
+				 .addField("Prefix", 'd!', true)
+				 .addField("Total Commands", `${totcmds} commands`, true)
 				.addField("Total Servers", `${client.guilds.cache.size}`, true)
 				.addField("Uptime Percentage", `${numberas}%`)
 				.addField("Ping", `${Math.round(client.ws.ping)}ms`, true)
@@ -35,10 +35,7 @@ module.exports.run = async (client, message) => {
 					`${days}d ${hours}h ${minutes}m ${seconds}.${milliseconds}s`,
 					true
 				)
-				.setFooter(
-					"Draconian 2021",
-					"https://cdn.koolisw.tk/file/kooliswCDN/79654c28218d88a8cfefe9c01f6d338c.png"
-				);
+;
 			return message.channel.send({ embed });
 		});
 };

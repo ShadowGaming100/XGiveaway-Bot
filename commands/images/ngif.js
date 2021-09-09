@@ -8,7 +8,7 @@ module.exports.run = async (client, message, args) => {
 		.setColor("#ff9900")
 		.setTitle("OwO, Heres your Neko Gif")
 		.setImage(body.url)
-		.setFooter("© Draconian Workshop");
+		.setFooter("© XGiveaway Bot Workshop");
 	message.channel.send({ embed });
 };
 
