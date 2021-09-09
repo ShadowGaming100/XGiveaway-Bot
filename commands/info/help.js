@@ -15,7 +15,7 @@ module.exports.run = async (client, message, args) => {
 			)
 			.setColor("GREEN")
 			.setDescription(
-				`**My prefix:** \`${prefixesdatabase.prefix}\` , Slash Commands list for \`/help\`\nClick [HERE](https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot%20applications.commands) to invite me to your server.`
+				`**My prefix:** \`${prefixesdatabase.prefix}\` , Slash Commands list for \`/help.`
 			)
 			.addField("**📱Basic**", "`help`, `ping`, `vote`, `uptime`")
 			.addField(
@@ -45,7 +45,7 @@ module.exports.run = async (client, message, args) => {
 
 			.addField("**:gear:Custom Function**", "`setprefix`")
 			.setFooter(
-				`© ${nowyear} ${client.user.username} | This command requested by ${message.author.username}#${message.author.discriminator}`
+				`${client.user.username} | This command requested by ${message.author.username}#${message.author.discriminator}`
 			);
 		message.channel.send({ embed });
 	}
@@ -76,7 +76,7 @@ module.exports.run = async (client, message, args) => {
 				)
 				.setColor("#4a4b4d")
 				.setFooter(
-					`© ${nowyear} ${client.user.username} | This command requested by ${message.author.username}#${message.author.discriminator}`
+					` ${client.user.username} | This command requested by ${message.author.username}#${message.author.discriminator}`
 				);
 
 			message.channel.send(embed);

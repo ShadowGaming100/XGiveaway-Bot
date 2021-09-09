@@ -88,7 +88,7 @@ const GiveawayManagerWithOwnDatabase = class extends GiveawaysManager {
 
 client.giveawaysManager = new GiveawayManagerWithOwnDatabase(client, {
 	storage: false,
-	updateCountdownEvery: 10000,
+	updateCountdownEvery: 90000,
 	endedGiveawaysLifetime: 30000,
 	hasGuildMembersIntent: false,
 	default: {

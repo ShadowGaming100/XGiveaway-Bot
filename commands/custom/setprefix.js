@@ -37,9 +37,7 @@ module.exports.run = async (client, message, args) => {
 
 	const warningsembed = new Discord.MessageEmbed()
 		.setDescription(
-			`${
-				emojis.warning
-			} When you change the default prefix, the current prefix \`${client.settings.get(
+			` When you change the default prefix, the current prefix \`${client.settings.get(
 				message.guild.id,
 				"prefix"
 			)}\` will not be woking anymore and it will be changed to new prefix you enter.\n\nPlease type \`confirm\` to confirm your action!`
@@ -48,7 +46,7 @@ module.exports.run = async (client, message, args) => {
 
 	const calcelembed = new Discord.MessageEmbed()
 		.setDescription(
-			`${emojis.cross} Time's up! Setting prefix's action cancelled!`
+			` Time's up! Setting prefix's action cancelled!`
 		)
 		.setColor("RED");
 
@@ -67,7 +65,7 @@ module.exports.run = async (client, message, args) => {
 			message.delete();
 			const doneembed = new Discord.MessageEmbed()
 				.setDescription(
-					`${emojis.tick} Prefix has been changed to: \`${client.settings.get(
+					` Prefix has been changed to: \`${client.settings.get(
 						message.guild.id,
 						"prefix"
 					)}\``
